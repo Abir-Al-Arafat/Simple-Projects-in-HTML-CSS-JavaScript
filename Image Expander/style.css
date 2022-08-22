@@ -1,0 +1,113 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    display: flex;
+    /* flex-direction: column; */
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    /* height: 100vh; */
+    overflow: hidden;
+}
+
+.container{
+    display: flex;
+    width: 90vw;
+}
+
+.panel{
+    background-size: cover;
+    height: 80vh;
+    border-radius: 50px;
+    color: black;
+    cursor: pointer;
+    margin: 2px;
+    flex: 1;
+    position: relative;
+    transition: flex 0.7s ease-in;
+}
+
+.panel-one{
+    background-image: url('img/sub.jpg');
+}
+
+.panel-two{
+    background-image: url('img/burger.jpg');
+}
+
+.panel-three{
+    background-image: url('img/chickenWings.jpg');
+}
+
+.panel-four{
+    background-image: url('img/frenchFries.jpg');
+}
+
+.panel-five{
+    background-image: url('img/pizza.jpg');
+}
+
+.panel-six{
+    background-image: url('img/sandwich.jpg');
+}
+
+.panel-seven{
+    background-image: url('img/friedChicken.jpg');
+}
+
+.panel-eight{
+    background-image: url('img/chowmein.jpg');
+}
+
+.panel-nine{
+    background-image: url('img/dumpling.jpg');
+}
+
+.panel-ten{
+    background-image: url('img/noodles.jpg');
+}
+
+.panel-eleven{
+    background-image: url('img/orangeJuice.jpg');
+}
+
+.panel-twelve{
+    background-image: url('img/smoothie.jpg');
+}
+
+.panel-thirteen{
+    background-image: url('img/coffee.jpg');
+}
+
+.panel h3{
+    font-size: 20px;
+    position: absolute;
+    top: 20px;
+    left: 10px;
+    margin: 0;
+    opacity: 0;
+    color: bisque;
+}
+
+.panel.active{
+    flex: 3;
+}
+
+.panel.active h3{
+    opacity: 1;
+    transition: opacity 0.9s ease-in 0.1s;
+}
+
+@media (max-width: 480px){
+    .container{
+        width: 100vw;
+    }
+
+    /* .panel:nth-of-type(4), */
+    .panel:nth-of-type(odd){
+        display: none;
+    }
+}
