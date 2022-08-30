@@ -1,0 +1,98 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgba(32, 108, 170, 0.575);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+}
+
+.container{
+    background-color: rgba(14, 29, 43, 0.658);
+    padding: 20px 40px;
+    border-radius: 7px;
+}
+
+.container h1{
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.container a{
+    text-decoration: none;
+    color: rgb(171, 181, 233);
+}
+
+.form-control{
+    position: relative;
+    margin: 50px 0 0;
+    width: 300px;
+}
+
+.form-control input{
+    background-color: rgba(104, 120, 136, 0.425);
+    border: 0;
+    border-bottom: 2px #fff solid;
+    display: block;
+    width: 100%;
+    padding: 10px 0;
+    outline: 0;
+}
+
+.form-control input:focus,
+.form-control input:valid{
+    outline: 0;
+    border-bottom-color: rgb(19, 173, 201);
+}
+
+.btn{
+    cursor: pointer;
+    display: inline-block;
+    width: 100%;
+    padding: 10px;
+    border: 0;
+    border-radius: 5px;
+    background-color: rgb(58, 179, 138);
+    color:rgb(107, 63, 9);
+    font-size: 0.9rem; 
+    margin-top: 16px;
+}
+
+.btn:focus{
+    outline: 0;
+}
+
+.btn:active{
+    transform: scale(0.98);
+}
+
+.form-control label{
+    position: absolute;
+    top: 10px;
+    left: 5px;
+}
+
+/* adding animation to the text inside input */
+
+.form-control label span{
+    display: inline-block;
+    /* font-size: 18px; */
+    min-width: 5px;
+    /* adding effect to the label */
+    transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+/* adding color when clicked */
+/* adding animation */
+.form-control input:focus + label span,
+.form-control input:valid + label span{
+    color:rgb(19, 173, 201);
+    transform: translateY(-32px);
+}
