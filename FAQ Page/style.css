@@ -1,0 +1,84 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color:antiquewhite;
+}
+
+h1{
+    margin: 35px;
+    text-align: center;
+}
+
+/* container porperties */
+.faq-container{
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* setting the initial box properties */
+.faq{
+    background-color: transparent;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin: 20px;
+    padding: 30px;
+    position: relative;
+    overflow: hidden;
+    transition: 0.3s ease-in;
+}
+
+/* adding a background color and shadow in the clicked box */
+.faq.active{
+    background-color: rgb(219, 190, 152);
+    box-shadow: 5px 5px 9px rgba(0,0,0,0.5);
+}
+
+/* keeping the answers hidden initially */
+.faq-text{
+    display: none;
+    margin: 30px 0;
+}
+
+/* showing the answers when box is active */
+.faq.active .faq-text{
+    display: block;
+}
+
+/* button properties */
+.faq-toggle{
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    padding: 0;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    height: 30px;
+    width: 30px;
+}
+
+/* keeping cross button removed from the box initially */
+.faq-toggle .fa-times{
+    display: none;
+}
+
+/* removing down button from the box after activated */
+.faq.active .faq-toggle .fa-chevron-down{
+    display: none;
+}
+
+/* showing cross button in the box after activated */
+.faq.active .faq-toggle .fa-times{
+    display: block;
+}
+
+
+.faq-toggle:focus{
+    outline: 0;
+}
