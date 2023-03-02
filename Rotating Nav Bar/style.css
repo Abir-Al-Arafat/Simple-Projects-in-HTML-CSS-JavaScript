@@ -1,0 +1,136 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    letter-spacing: 1px;
+    background: #333;
+    color: #222;
+    overflow-x: hidden;
+    margin: 0;
+}
+
+.container{
+    background: #f4f4f4;
+    transform-origin: top left;
+    transition: transform 0.5s linear;
+    width: 100vw;
+    min-height: 100vh;
+    padding: 60px;
+}
+
+.container.show-nav{
+    transform: rotate(-20deg);
+}
+
+.circle-container{
+    position: fixed;
+    top: -100px;
+    left: -100px;
+}
+
+.circle{
+    width: 200px;
+    height: 200px;
+    background: #ff7979;
+    border-radius: 50%;
+    position: relative;
+    transition: transform 0.5s linear;
+}
+
+.container.show-nav .circle{
+    transform: rotate(-70deg);
+}
+
+.circle button{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    height: 100px;
+    background: transparent;
+    border: 0;
+    font-size: 26px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.circle button:focus{
+    outline: none;
+}
+
+.circle button#open{
+    left: 60%;
+}
+
+.circle button#close{
+    top: 60%;
+    transform: rotate(90deg);
+    transform-origin: top left;
+    z-index: 100;
+}
+
+.container.show-nav + nav li{
+    transform: translateX(0);
+    transition-delay: 0.5s;
+}
+
+nav{
+    position: fixed;
+    bottom: 40px;
+    left: 0;
+    z-index: 90;
+}
+
+nav ul{
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li{
+    color: #f4f4f4;
+    text-transform: uppercase;
+    margin: 30px 10px;
+    transform: translateX(-100%);
+    transition: transform 0.5s ease-in-out;
+}
+
+nav ul li i{
+    margin-right: 3px;
+    font-size: 18px;
+}
+
+nav ul li + li{
+    margin-left: 25px;
+    transform: translateX(-150%);
+}
+
+nav ul li + li + li{
+    margin-left: 45px;
+    transform: translateX(-150%);
+}
+
+.content img{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.content{
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.content h1{
+    margin-bottom: 0;
+}
+
+.content small{
+    font-style: italic;
+    color: #555;
+}
+
+.content p{
+    color: #333;
+    line-height: 1.5;
+}
+
