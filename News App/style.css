@@ -81,6 +81,10 @@ nav{
     color: red;
 }
 
+.nav-item.active{
+    color: var(--accent-color);
+}
+
 .search-bar{
     height: 2rem;
     gap: 8px;
@@ -160,4 +164,48 @@ main{
 
 .news-source{
     margin: 12px 0;
+}
+
+@media(max-width: 1095px){
+    /* body{
+        background: red;
+    } */
+    .cards-container{
+        justify-content: space-around;
+    }
+
+    .card{
+        width: 45%;
+    }
+}
+
+@media(max-width: 736px){
+    /* body{background: red;} */
+    .card{
+        width: 70%;
+    }
+    
+    .main-nav{
+        flex-direction: column;
+    }
+
+    .nav-links ul{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .search-bar{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 3.5rem;
+    }
+
+    .search-bar .news-input{
+        margin-top: 0.5rem;
+        padding: 12px;
+    }
+
+    main{
+        margin-top: 250px;
+    }
 }
