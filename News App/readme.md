@@ -6,8 +6,8 @@
 6. search option is functional
 7. media query is used for responsiveness
 
-To get an API key:
-    1. go to https://newsapi.org/
+To get an API key: <br>
+    1. go to https://newsapi.org/ <br>
     2. open an account and copy paste the key in API_KEY variable
 
 Deployed At: https://newsflex-abir.netlify.app/
