@@ -9,3 +9,5 @@
 To get an API key:
     1. go to https://newsapi.org/
     2. open an account and copy paste the key in API_KEY variable
+
+Deployed At: https://newsflex-abir.netlify.app/
