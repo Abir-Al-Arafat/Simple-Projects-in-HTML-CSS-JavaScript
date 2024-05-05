@@ -5,6 +5,8 @@
 5. navbar buttons are functional
 6. search option is functional
 7. media query is used for responsiveness
+8. serverless function used for deployment
+9. repo link to the serverless function version: https://github.com/Abir-Al-Arafat/NewsFlex-HTML-CSS-JS
 
 To get an API key: <br>
     1. go to https://newsapi.org/ <br>
